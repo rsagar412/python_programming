@@ -39,10 +39,10 @@ print("Welcome to the Python Programming")
 
 
 #sets in python, these are unordered data items, it cannot be changed and it does not allow duplicate values. {}
-import sys
+# import sys
 
-setdemo = {1,2,3,4,5,6,7,8,9,10}
-setdemo2 = {4,5,6,78,98,99}
+# setdemo = {1,2,3,4,5,6,7,8,9,10}
+# setdemo2 = {4,5,6,78,98,99}
 # vardemo = "Sagar"
 # emptyset = set()
 # print(setdemo)
@@ -51,16 +51,42 @@ setdemo2 = {4,5,6,78,98,99}
 # for i in setdemo:
 #     print(i)
 #set methods
-print(setdemo.union(setdemo2))    #prints the union of two sets excluding the duplicate values.
-print("This method will update the set1 with the values that present in set2", setdemo.update(setdemo2))
-print(setdemo, setdemo2)
-print(setdemo.intersection(setdemo2))  #prints the common values in the two sets
-print(setdemo.intersection_update(setdemo2))  #prints the common values in the two sets 
-print(setdemo)
-print(setdemo.update("1,2,3,4"))
-print(setdemo)
-setdemo.discard('22')   #remove and discard methods to remove one item from the set and discard can be used to ignore the error if the item is not present in the set.
-print(setdemo)
-del setdemo  #deletes the entire set and clear () method is used to clear the set values.
-setdemo = {1,2,3,4,5,6,7,8,9,10}
-print(setdemo)
+# print(setdemo.union(setdemo2))    #prints the union of two sets excluding the duplicate values.
+# print("This method will update the set1 with the values that present in set2", setdemo.update(setdemo2))
+# print(setdemo, setdemo2)
+# print(setdemo.intersection(setdemo2))  #prints the common values in the two sets
+# print(setdemo.intersection_update(setdemo2))  #prints the common values in the two sets 
+# print(setdemo)
+# print(setdemo.update("1,2,3,4"))
+# print(setdemo)
+# setdemo.discard('22')   #remove and discard methods to remove one item from the set and discard can be used to ignore the error if the item is not present in the set.
+# print(setdemo)
+# del setdemo  #deletes the entire set and clear () method is used to clear the set values.
+# setdemo = {1,2,3,4,5,6,7,8,9,10}
+# print(setdemo)
+
+#dictionary in python, it is unordered, changeable and indexed. {key:value pairs} from python 3.7 onwards the order is maintained.
+# dictdemo = {
+#     "name": "Sagar",
+#     "age": 28,
+# }
+# print(dictdemo['age'])
+# print(dictdemo.keys())
+# print(dictdemo.values())
+# for key in dictdemo.keys():
+#     # print(dictdemo[key])
+#     print(f"The value corresponding to {key} is {dictdemo[key]}")
+
+# print(dictdemo.items())
+# for key, value in dictdemo.items():
+#     print(f"Key is {key} and value is {value}")
+
+#dictionary methods
+# ep = {200: 45, 65:79, 45: 89}
+# ep2 = {13: 56, 43:79, 76: 89}
+# ep.update(ep2)
+# print("This is an updated dictionary", ep)
+# ep.pop(200)  #pop method is used to remove the key value pair from the dictionary with the key value.
+# ep.popitem()  #popitem method is used to remove the last key value pair from the dictionary.
+# del ep2
+# print(ep)
