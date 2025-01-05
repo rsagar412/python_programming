@@ -90,3 +90,27 @@ print("Welcome to the Python Programming")
 # ep.popitem()  #popitem method is used to remove the last key value pair from the dictionary.
 # del ep2
 # print(ep)
+
+# for i in range(6):
+#   print(i)
+#   # if i == 3:
+#   #   break   #the else block will not be executed if the break statement is used.
+# else:
+#   print("This is the end block of the for loop")
+
+
+#error handling in python
+try:
+  a= int(input("Enter the number: "))
+  c= a/0
+  print(c)
+except ValueError as e:
+  print("Number cannot be divided by zero!!!! Error message:", e)
+except ZeroDivisionError as e:
+  print("Number cannot be divided by zero!!!! Error message:", e)
+
+finally:        #even if the finally block is inside a function with return statement, the finally block will be executed.
+  print("This finally block will always be executed")
+
+
+print("This is the further continuation of the program")
