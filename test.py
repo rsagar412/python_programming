@@ -121,6 +121,47 @@ print("Welcome to the Python Programming")
 #   print("Number is between 0-10")
 #   raise ValueError("Number must be between 0-10")
 
+#built in FileNotFoundError
+# def openfile(filename):
+#   try:
+#    file = open(filename, 'r')     #open the file in read mode
+#    contents = print(file.read())  #read the contents of the file
+#    print("This is the content of the file", contents)  #print the contents of the file
+#    file.close()   #close the file to release the resources
+#   except FileNotFoundError as e:
+#     print("File not found in the directory", e)
+
+# inputfile = input("Enter the file name: ")
+# openfile(inputfile)
+
 #reverse a string
-strex = "Sagar" [::-1] 
-print(strex)
+# strex = "Sagar" [::-1] 
+# print(strex)
+
+#Enumerate function in python
+
+# enudemo =  [1,2,3,45,5,6,8]
+# index = 0
+# for i in enudemo:
+#   print(i)
+#   if (index == 3):
+#     print("Good work, Sagar")
+#   index += 1
+# print("This is the end of the program")
+
+
+# enudemo =  [1,2,3,45,5,6,8]
+# index = 0
+# for index, i in enumerate(enudemo):      #enumerate function is used to get the index of the elements in the list.
+#   print(i)
+#   if (index == 3):
+#     print("Good work, Sagar")
+#     break
+# print("This is the end of the program")
+  
+#virtual environment  :  python -m venv virtualenvname     //to create a virtual environment  
+#deactivate the virtual environment : deactivate
+#activate the virtual environment : source virtualenvname/bin/activate and then install the packages in the virtual environment.
+#install different versions of pandas in the virtual environment : pip install pandas==0.25.0
+#install different versions of python in the virtual environment : pyenv install 3.7.4
+#find the installed pandas version : pip show pandas
