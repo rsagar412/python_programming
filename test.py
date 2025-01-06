@@ -100,17 +100,27 @@ print("Welcome to the Python Programming")
 
 
 #error handling in python
-try:
-  a= int(input("Enter the number: "))
-  c= a/0
-  print(c)
-except ValueError as e:
-  print("Number cannot be divided by zero!!!! Error message:", e)
-except ZeroDivisionError as e:
-  print("Number cannot be divided by zero!!!! Error message:", e)
+# try:
+#   a= int(input("Enter the number: "))
+#   c= a/0
+#   print(c)
+# except ValueError as e:
+#   print("Number cannot be divided by zero!!!! Error message:", e)
+# except ZeroDivisionError as e:
+#   print("Number cannot be divided by zero!!!! Error message:", e)
 
-finally:        #even if the finally block is inside a function with return statement, the finally block will be executed.
-  print("This finally block will always be executed")
+# finally:        #even if the finally block is inside a function with return statement, the finally block will be executed. It is typically used for cleanup tasks and releasing resources that need to be performed no matter what.
+#   print("This finally block will always be executed")
 
+# print("This is the further continuation of the program")
 
-print("This is the further continuation of the program")
+#Raise an error
+
+# a = int(input("Enter the number: \n"))
+# if a < 0 or a> 10:
+#   print("Number is between 0-10")
+#   raise ValueError("Number must be between 0-10")
+
+#reverse a string
+strex = "Sagar" [::-1] 
+print(strex)
