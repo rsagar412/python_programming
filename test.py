@@ -167,9 +167,37 @@ print("Welcome to the Python Programming")
 #find the installed pandas version : pip show pandas
 
 
-import math as m
+# import math as m
 # result = m.sqrt(729)
 # print(result)
-import sagar as s
-# s.welcome()
-print(__name__)  #prints the name of the module
+# import sagar as s
+# # s.welcome()
+# print(__name__)  #prints the name of the module
+
+# import os
+
+# if (not os.path.exists("Data")):      #os.path.exists is used to check if the folder exists or not.
+#     os.mkdir("Data")
+# i = 0
+# while (i<5):
+#     os.mkdir("Data/Sagar")
+#     i=i+1 
+#     os.mkdir("Data/Ankita") 
+#     i=i+1
+#     os.mkdir("Data/Papa") 
+#     i=i+1
+#     os.mkdir("Data/Mummy") 
+    # os.rename("Data/Mummy", "Data/M")  #os.rename is used to rename the folder
+
+# print("The mentioned folders have been created")
+# os.rename("Data/M", "Data/Mom") 
+# print(os.listdir("Data/Sagar"))  #os.listdir is used to list the directories in the folder
+# print(os.getcwd())  #os.getcwd is used to get the current working directory
+# os.makedirs("Data1/Sagar1/Ankita1")  #os.makedirs is used to create the nested directories
+# print(os.name)
+# print(os.path.abspath('testfile.sr'))
+
+coding = True
+if (coding):
+    print("Condition is true, This is the coding block")
+
