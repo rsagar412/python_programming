@@ -197,7 +197,4 @@ print("Welcome to the Python Programming")
 # print(os.name)
 # print(os.path.abspath('testfile.sr'))
 
-coding = True
-if (coding):
-    print("Condition is true, This is the coding block")
 
