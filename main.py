@@ -209,26 +209,43 @@ import os
 
 #file handling in python
 # file = open("Data/testfile.txt", "a")  #open the file in read mode and it is a default mode and write mode will create the file if it does not exist.
-file = open("Data/testfile.txt", "r+")  #open the file in read and write mode
+# file = open("Data/testfile.txt", "r+")  #open the file in read and write mode
 # file.write("This statement is inserted after opening the file")
 # filevar =  file.read(15)
 # print(filevar)
 # print(file.readlines())
 # file.write("\nThis is the test line after the first statement")
-print(file.tell())
-print(file.seek(10))
-print(file.write("nnnnn"))
-print(file.tell())
-print(file.read(5))
-print(os.path.getsize("Data/testfile.txt"),' bytes')
+# print(file.tell())
+# print(file.seek(10))
+# print(file.write("nnnnn"))
+# print(file.tell())
+# print(file.read(5))
+# print(os.path.getsize("Data/testfile.txt"),' bytes')
 
-for line in file:
-    print(line.strip())
+# for line in file:
+#     print(line.strip())
 
-config = {}
-print(type(config)) 
-print(os.cpu_count())
+# config = {}
+# print(type(config)) 
+# print(os.cpu_count())
 
+#lambda function in python  :  lambda arguments: expression single line function
+add = lambda x, y: x+y
+print(add(2,3))
+
+numbers = [1,2,3,4]
+square = map(lambda a: a**2, numbers)
+print(list(square))   
+
+
+
+cube = lambda x: x**3
+
+def apply(alreadydefinedfunction, value):
+    return print(alreadydefinedfunction(value))
+
+print(cube(4))
+apply(cube, 3)
 
 
 
