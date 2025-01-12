@@ -174,7 +174,7 @@ print("Welcome to the Python Programming")
 # # s.welcome()
 # print(__name__)  #prints the name of the module
 
-# import os
+import os
 
 # if (not os.path.exists("Data")):      #os.path.exists is used to check if the folder exists or not.
 #     os.mkdir("Data")
@@ -196,5 +196,39 @@ print("Welcome to the Python Programming")
 # os.makedirs("Data1/Sagar1/Ankita1")  #os.makedirs is used to create the nested directories
 # print(os.name)
 # print(os.path.abspath('testfile.sr'))
+
+
+#local and global variables in python
+# x = 'This is a global variable'
+# def test():
+#     global x     #global keyword is used to declare the variable as global which can be accessed outside the function
+#     x = "This is a local variable"
+#     print(x)
+# test()
+# print(x)
+
+#file handling in python
+# file = open("Data/testfile.txt", "a")  #open the file in read mode and it is a default mode and write mode will create the file if it does not exist.
+file = open("Data/testfile.txt", "r+")  #open the file in read and write mode
+# file.write("This statement is inserted after opening the file")
+# filevar =  file.read(15)
+# print(filevar)
+# print(file.readlines())
+# file.write("\nThis is the test line after the first statement")
+print(file.tell())
+print(file.seek(10))
+print(file.write("nnnnn"))
+print(file.tell())
+print(file.read(5))
+print(os.path.getsize("Data/testfile.txt"),' bytes')
+
+for line in file:
+    print(line.strip())
+
+config = {}
+print(type(config)) 
+print(os.cpu_count())
+
+
 
 
