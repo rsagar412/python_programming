@@ -230,22 +230,42 @@ import os
 # print(os.cpu_count())
 
 #lambda function in python  :  lambda arguments: expression single line function
-add = lambda x, y: x+y
-print(add(2,3))
+# add = lambda x, y: x+y
+# print(add(2,3))
 
 numbers = [1,2,3,4]
-square = map(lambda a: a**2, numbers)
-print(list(square))   
-
-
+# square = map(lambda a: a**2, numbers)
+# print(list(square))   
 
 cube = lambda x: x**3
 
-def apply(alreadydefinedfunction, value):
-    return print(alreadydefinedfunction(value))
+# def apply(alreadydefinedfunction, value):
+#     return print(alreadydefinedfunction(value))
+# apply(cube, 3)
 
-print(cube(4))
-apply(cube, 3)
+# print(cube(4))
+# new1=[]
+# print(map(cube, numbers))
+
+#map function in python
+# l = list(map(cube, numbers)) 
+# print(l)   
+
+#filter function in python
+
+def filter_function(x):
+    if x>2:
+        return True
+    else:
+        return False
+filteredlist = list(filter(filter_function, numbers))
+print(filteredlist)
+
+sum =  lambda x,y: x+y
+#reduce function in python
+from functools import reduce
+reducedcount = reduce(sum, numbers)
+print(reducedcount)
 
 
 
