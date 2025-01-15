@@ -303,3 +303,22 @@ a = Family('Sagar', 'Developer')  #creating the object of the family class
 
 #constructor in python, it is used to initialize the object of the class. It is called automatically when the object is created. It is used to initialize the instance variables of the class.
 
+#decorator in python,
+# it is used to modify the behavior of the function or method. It is used to add extra functionality to the function. It is used to wrap the function and modify its behavior
+
+def dec_function(funobj):
+    def wrapper():
+        print("Good Morning")
+        funobj()
+        print("Stay tuned")
+
+    return wrapper
+
+@dec_function
+def test_fun():
+    print("This is a test function")
+
+test_fun()
+
+
+
