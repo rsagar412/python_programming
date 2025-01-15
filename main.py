@@ -283,16 +283,23 @@ class Family:
     mother = "Jayshree"
     father = "Bhanji"
     sister = "Ankita"
+    def __init__(self1, n, o):  #self is the reference to the object of the class. It is used to access the variables of the class. __init__ is the constructor of the class. It is used to initialize the object of the class.
+        # self1.mother = n
+        # self1.father = o
+        print(f"My mother's name is {self1.mother} and her husband is {self1.father}")
 
-    def profession(demoobj):
-        print(f"Mother's name - {demoobj.mother}, Profession - Housewife")
-        print(f"Father's name - {demoobj.father}, Profession - Businessman")
-        print(f"Sister's name - {demoobj.sister}, Profession - Software Engineer")
+    # def profession(demoobj):
+    #     print(f"Mother's name - {demoobj.mother}, Profession - Housewife")
+    #     print(f"Father's name - {demoobj.father}, Profession - Businessman")
+    #     print(f"Sister's name - {demoobj.sister}, Profession - Software Engineer")
 
-a = Family()  #creating the object of the family class
-# profession(a) #passing the object of the class to the function
-a.mother = "Mom"
-print(a.mother)
-a.profession()
-print(id(a))
+a = Family('Sagar', 'Developer')  #creating the object of the family class
+# b = Family()
+# # profession(a) #passing the object of the class to the function
+# a.mother = "Mom"
+# print(a.mother)
+# a.profession()
+# print(id(a))
+
+#constructor in python, it is used to initialize the object of the class. It is called automatically when the object is created. It is used to initialize the instance variables of the class.
 
