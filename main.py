@@ -233,11 +233,11 @@ import os
 # add = lambda x, y: x+y
 # print(add(2,3))
 
-numbers = [1,2,3,4]
-# square = map(lambda a: a**2, numbers)
-# print(list(square))   
+# numbers = [1,2,3,4]
+# # square = map(lambda a: a**2, numbers)
+# # print(list(square))   
 
-cube = lambda x: x**3
+# cube = lambda x: x**3
 
 # def apply(alreadydefinedfunction, value):
 #     return print(alreadydefinedfunction(value))
@@ -253,19 +253,46 @@ cube = lambda x: x**3
 
 #filter function in python
 
-def filter_function(x):
-    if x>2:
-        return True
-    else:
-        return False
-filteredlist = list(filter(filter_function, numbers))
-print(filteredlist)
+# def filter_function(x):
+#     if x>2:
+#         return True
+#     else:
+#         return False
+# filteredlist = list(filter(filter_function, numbers))
+# print(filteredlist)
 
-sum =  lambda x,y: x+y
-#reduce function in python
-from functools import reduce
-reducedcount = reduce(sum, numbers)
-print(reducedcount)
+# sum =  lambda x,y: x+y
+# #reduce function in python
+# from functools import reduce
+# reducedcount = reduce(sum, numbers)
+# print(reducedcount)
 
 
+#is and ==    object interning is done for the values between -5 to 256. True will be returned. 
+# a = 2580
+# b = 2580
+# c= 'hello12345 this is an example'
+# d= 'hello12345 this is an example'
+# print (a is b)
+# print (c is d)
+
+#OOPs concepts in python
+# Classes and objects. everything in python is an object. Everything revolves around an object in python. certain classes will have their entity and their properties. Class is basically the blueprint/template of the object. Object is the instance of the class. Properties is the state of the object. Methods are the behavior of the object. Inheritance is the property of the object to inherit the properties of the parent class. Encapsulation is the property of the object to hide the data. Polymorphism is the property of the object to take multiple forms.
+
+class Family:
+    mother = "Jayshree"
+    father = "Bhanji"
+    sister = "Ankita"
+
+    def profession(demoobj):
+        print(f"Mother's name - {demoobj.mother}, Profession - Housewife")
+        print(f"Father's name - {demoobj.father}, Profession - Businessman")
+        print(f"Sister's name - {demoobj.sister}, Profession - Software Engineer")
+
+a = Family()  #creating the object of the family class
+# profession(a) #passing the object of the class to the function
+a.mother = "Mom"
+print(a.mother)
+a.profession()
+print(id(a))
 

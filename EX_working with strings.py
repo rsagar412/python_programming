@@ -11,7 +11,7 @@ for word in words:
     if(len(word) > 3):  
             r1='dft'
             r2='ere'           
-            newwords = r1+ word[1:]+word[0] + r2   #if the length of the string is greater than 3, then the first character of the string will be moved and appended to the end of the string. Random characters to the string.
+            newwords = r1 + word[1:] + word[0] + r2   #if the length of the string is greater than 3, then the first character of the string will be moved and appended to the end of the string. Random characters to the string.
             nwords.append(newwords)
 print(nwords)           
 print(" ".join(nwords))
