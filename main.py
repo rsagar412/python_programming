@@ -325,25 +325,65 @@ import os
 
 #getters and setters in python
 
-class gettersetterex:
-    def __init__(self, value):
-        self._value = value    #leading underscore is used to make the variable private. It is used to indicate that the variable is private and should not be accessed directly.
-    def showvar(self):      
-        print(f'The value is {self._value}')
+# class gettersetterex:
+#     def __init__(self, value):
+#         self._value = value    #leading underscore is used to make the variable private. It is used to indicate that the variable is private and should not be accessed directly.
+#     def showvar(self):      
+#         print(f'The value is {self._value}')
 
-    @property         #property decorator is used to access the value of the variable.converts the method into a variable
-    def ten_value (self):
-        return 10*self._value
+#     @property         #property decorator is used to access the value of the variable.converts the method into a variable
+#     def ten_value (self):
+#         return 10*self._value
 
-    @ten_value.setter    #propertyname.setter is used to set the value of the variable.
-    def ten_value(self, new_value):
-        self._value = new_value/10   #no return statement is used in the setter method.
+#     @ten_value.setter    #propertyname.setter is used to set the value of the variable.
+#     def ten_value(self, new_value):
+#         self._value = new_value/10   #no return statement is used in the setter method.
 
-objgetset = gettersetterex(5)
-objgetset.showvar()
-objgetset.ten_value = 100
-objgetset.showvar()
-print(objgetset._value)
+# objgetset = gettersetterex(5)
+# objgetset.showvar()
+# objgetset.ten_value = 100
+# objgetset.showvar()
+# print(objgetset._value)
+
+
+#access modifiers in python
+#bydefault the variables are public in python. Public variables can be accessed outside the class. Protected variables are accessed within the class and the child class. Private variables are accessed within the class only.
+# class Employee:
+#     def __init__(self, name, sal):
+#         self.__name = name   #double underscore is used to make the variable private. It is used to indicate that the variable is private and should not be accessed directly.
+#         self.sal = sal
+
+#     def show(self):
+#         print(f"Name is {self.__name} and salary is {self.sal}")
+
+# empobj = Employee('Sagar', 100000)
+
+# # empobj.show()
+# # print(empobj.__name)  #this will throw an error as the variable is private and cannot be accessed outside the class.
+# print(empobj._Employee__name)  #this is the way to access the private variable outside the class. It is called name mangling.
+# print(empobj.__dir__())  #this is used to get the list of the attributes of the object.
+# print(empobj.__sizeof__())  #this is used to get the size of the object in bytes.
+
+
+class Student:
+    def __init__(self):
+        self._name = "Sagar"  
+    def _funName(self):     
+        return "SagarRathod"
+
+class Subject(Student):
+    pass
+
+objstudent = Student()
+objsubject = Subject()
+
+print(objstudent._name)
+print(objsubject._funName())
+
+
+
+        
+
 
 
 
