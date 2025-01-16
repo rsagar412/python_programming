@@ -279,21 +279,21 @@ import os
 #OOPs concepts in python
 # Classes and objects. everything in python is an object. Everything revolves around an object in python. certain classes will have their entity and their properties. Class is basically the blueprint/template of the object. Object is the instance of the class. Properties is the state of the object. Methods are the behavior of the object. Inheritance is the property of the object to inherit the properties of the parent class. Encapsulation is the property of the object to hide the data. Polymorphism is the property of the object to take multiple forms.
 
-class Family:
-    mother = "Jayshree"
-    father = "Bhanji"
-    sister = "Ankita"
-    def __init__(self1, n, o):  #self is the reference to the object of the class. It is used to access the variables of the class. __init__ is the constructor of the class. It is used to initialize the object of the class.
-        # self1.mother = n
-        # self1.father = o
-        print(f"My mother's name is {self1.mother} and her husband is {self1.father}")
+# class Family:
+#     mother = "Jayshree"
+#     father = "Bhanji"
+#     sister = "Ankita"
+#     def __init__(self1, n, o):  #self is the reference to the object of the class. It is used to access the variables of the class. __init__ is the constructor of the class. It is used to initialize the object of the class.
+#         # self1.mother = n
+#         # self1.father = o
+#         print(f"My mother's name is {self1.mother} and her husband is {self1.father}")
 
     # def profession(demoobj):
     #     print(f"Mother's name - {demoobj.mother}, Profession - Housewife")
     #     print(f"Father's name - {demoobj.father}, Profession - Businessman")
     #     print(f"Sister's name - {demoobj.sister}, Profession - Software Engineer")
 
-a = Family('Sagar', 'Developer')  #creating the object of the family class
+# a = Family('Sagar', 'Developer')  #creating the object of the family class
 # b = Family()
 # # profession(a) #passing the object of the class to the function
 # a.mother = "Mom"
@@ -304,21 +304,46 @@ a = Family('Sagar', 'Developer')  #creating the object of the family class
 #constructor in python, it is used to initialize the object of the class. It is called automatically when the object is created. It is used to initialize the instance variables of the class.
 
 #decorator in python,
-# it is used to modify the behavior of the function or method. It is used to add extra functionality to the function. It is used to wrap the function and modify its behavior
+# it is used to modify the behavior of the function or method. It is used to add extra functionality to the function. It is used to wrap the function and modify its behavior. To add functionality (like logging, validation, or timing) without modifying the original function.
 
-def dec_function(funobj):
-    def wrapper():
-        print("Good Morning")
-        funobj()
-        print("Stay tuned")
+# def dec_function(funobj):
+#     def wrapper(*args, **kwargs):  #use to handle positional and keyword arguments. *args is used to handle any number of positional arguments and **kwargs is used to handle any number of the keyword arguments (key-value pair dictionary arguments).
+#         print("Good Morning")
+#         funobj(*args, **kwargs)  #calling the original function (test_fun())
+#         print("Stay tuned")
+#     return wrapper  
 
-    return wrapper
+# @dec_function  # @ is used to call the decorator function. this is the syntactic sugar in python.
+# def test_fun():
+#     print("This is a test function")
 
-@dec_function
-def test_fun():
-    print("This is a test function")
+# @dec_function
+# def test_fun1(a,b):
+#     print(a*b)
 
-test_fun()
+# test_fun1(8,9)
+
+#getters and setters in python
+
+class gettersetterex:
+    def __init__(self, value):
+        self._value = value    #leading underscore is used to make the variable private. It is used to indicate that the variable is private and should not be accessed directly.
+    def showvar(self):      
+        print(f'The value is {self._value}')
+
+    @property         #property decorator is used to access the value of the variable.converts the method into a variable
+    def ten_value (self):
+        return 10*self._value
+
+    @ten_value.setter    #propertyname.setter is used to set the value of the variable.
+    def ten_value(self, new_value):
+        self._value = new_value/10   #no return statement is used in the setter method.
+
+objgetset = gettersetterex(5)
+objgetset.showvar()
+objgetset.ten_value = 100
+objgetset.showvar()
+print(objgetset._value)
 
 
 
