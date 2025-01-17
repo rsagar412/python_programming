@@ -365,20 +365,46 @@ import os
 # print(empobj.__sizeof__())  #this is used to get the size of the object in bytes.
 
 
-class Student:
-    def __init__(self):
-        self._name = "Sagar"  
-    def _funName(self):     
-        return "SagarRathod"
+# class Student:
+#     def __init__(self):
+#         self._name = "Sagar"  
+#     def _funName(self):     
+#         return "SagarRathod"
 
-class Subject(Student):
-    pass
+# class Subject(Student):
+#     pass
 
-objstudent = Student()
-objsubject = Subject()
+# objstudent = Student()
+# objsubject = Subject()
 
-print(objstudent._name)
-print(objsubject._funName())
+# print(objstudent._name)
+# print(objsubject._funName())
+
+
+#static method in python
+#it is used to define the method that does not take the self or cls parameter. It is used to define the method that does not depend on the object or class. It is used to define the utility methods that do not depend on the object or class.
+
+# class Staticmethoddemo :
+#     @staticmethod
+#     def add(a,b):
+#         return a+b
+
+# print(Staticmethoddemo.add(2,3)) 
+
+#instance and class variables in python
+# class Employee:
+#     classvardemo = 'Sagar is amazing in learning python'   #class variable is used to define the variable that is common to all the objects of the class.
+#     def __init__(self, name, sal, company):
+#         self.name = name
+#         self.sal = sal
+#         self.company = company
+#     def showdetails(self):
+#         print(f"Name is {self.classvardemo}, Salary is {self.sal} and company is {self.company}")
+#     print(f"{classvardemo}")
+# E1 = Employee('Sagar', 100000, 'TCS')
+# E1.classvardemo = 'Sagar is amazing in learning python and he is a good learner'
+# E1.showdetails()
+
 
 
 
