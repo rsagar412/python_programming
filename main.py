@@ -465,3 +465,44 @@ import os
 
 # c = Child()
 # c.childmethoddemo()
+
+# class Employee:
+#     count = 0
+#     def __init__(self, name):
+#         self.name = name
+
+#     def __repr__(self):    #repr is for the developers representational purpose & __str__ is for the user readable
+        # return f"this method is called from the employee class with variable {self.name}"
+
+    # def __len__(self):    
+    #     i = 0 
+    #     for c in self.name:
+    #         i = i+1
+    #     return i
+
+#     def __call__(self):    #makes the object callable and performs the task in it. 
+#         self.count += 1
+#         return self.count
+
+# objemp = Employee('Sagar')
+# print(repr(objemp))
+# print(objemp())
+
+#method overriding in python
+# class Animal:
+#     def speak(self):
+#         print("This is the parent class animal method")
+
+# class Dog (Animal):
+#     def speak (self):
+#         super().speak()
+#         return ('Woof woof!')
+    
+# class Cat (Animal):
+#     def speak (self):
+#        return ('Meowww')
+
+# dog = Dog()
+# cat = Cat()
+# print('How the dog sounds', dog.speak())
+# print(cat.speak())
