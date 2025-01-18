@@ -406,25 +406,25 @@ import os
 # E1.showdetails()
 
 #class method in python
-class Employee:   
-    def __init__(self, name, sal, id):
-        self.name = name
-        self.sal = sal
-        self.id = id
+# class Employee:   
+#     def __init__(self, name, sal, id):
+#         self.name = name
+#         self.sal = sal
+#         self.id = id
 
-    @classmethod   #can be used as alternative constructor.
-    def splitname(cls, stringvar):
-        return cls(stringvar.split('-')[0], stringvar.split('-')[1], stringvar.split('-')[2])   #parameters must be passed in the same order as the __init__ method.
-    # company = "MasterCard"
-    # def show(self):
-    #     print(f"I work in {self.company}")
-    # @classmethod     #classmethod decorator is used to define the class method. It is used to define the method that takes the cls parameter. It is used to define the method that operates on the class variables.
-    # def changeCompany(cls, newCompany):
-    #     cls.company = newCompany
-e1 = Employee('Sagar', '100000', '123')
-stringvari = "Rakesh-Airoli-sec2-400708"
-empname = Employee.splitname(stringvari)
-print(empname.name)
+#     @classmethod   #can be used as alternative constructor.
+#     def splitname(cls, stringvar):
+#         return cls(stringvar.split('-')[0], stringvar.split('-')[1], stringvar.split('-')[2])   #parameters must be passed in the same order as the __init__ method.
+#     # company = "MasterCard"
+#     # def show(self):
+#     #     print(f"I work in {self.company}")
+#     # @classmethod     #classmethod decorator is used to define the class method. It is used to define the method that takes the cls parameter. It is used to define the method that operates on the class variables.
+#     # def changeCompany(cls, newCompany):
+#     #     cls.company = newCompany
+# e1 = Employee('Sagar', 100000, 123)
+# stringvari = "Rakesh-Airoli-sec2-400708"
+# empname = Employee.splitname(stringvari)
+# print(empname.name)
 # emp1 = e1.splitname(stringvar)
 # print(emp1)
 # print(e1.name)
@@ -434,11 +434,34 @@ print(empname.name)
 # e1.show()
 # print(Employee.company)
 
+# x = 'Sagar'
+# print(dir(x))  #dir method is used to get the list of the attributes/methods of the object.
+# # print(dir(e1))
+# print(x.count('a'))
 
+# class Person:
+#     def __init__(self, name, age):
+#         self.pname = name
+#         self.page = age
 
-        
+# p = Person('Sagar', 28)
+# print (p.__dict__)  #__dict__ is used to get the dictionary of the object.
 
+# print(help(p))
 
+#super method in python
 
+# class Parent:
+#     def parentmethoddemo(self):
+#         print("This is the parent class method called from the child class using the super method")
+    
+# class Child(Parent):
 
-Employee
+#     def parentmethoddemo(self):
+#         print("This is the child class method")
+#     def childmethoddemo(self):
+#         print("This is the child class method")
+#         super().parentmethoddemo()  #super method is used to call the parent class method.
+
+# c = Child()
+# c.childmethoddemo()
