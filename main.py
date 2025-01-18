@@ -472,7 +472,7 @@ import os
 #         self.name = name
 
 #     def __repr__(self):    #repr is for the developers representational purpose & __str__ is for the user readable
-        # return f"this method is called from the employee class with variable {self.name}"
+        # return f"this method is called from the employee class with variable {self.name}" These are the dunder (double underscore)/magic methods.
 
     # def __len__(self):    
     #     i = 0 
@@ -506,3 +506,23 @@ import os
 # cat = Cat()
 # print('How the dog sounds', dog.speak())
 # print(cat.speak())
+
+#operator overloading in python
+class Vector:
+    def __init__(self, i , j, k):
+        self.i = i
+        self.j = j
+        self.k = k
+
+    def __str__(self):
+        return f"{self.i}i + {self.j}j + {self.k}k"
+
+    def __add__(self,x):
+        return Vector(self.i + x.i,self.j + x.j,self.k + x.k)
+
+v = Vector(1,2,3)
+v2 = Vector(6,8,5)
+print(v)
+print(v2)
+print(v + v2)
+print(type(v + v2))
