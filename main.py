@@ -508,21 +508,65 @@ import os
 # print(cat.speak())
 
 #operator overloading in python
-class Vector:
-    def __init__(self, i , j, k):
-        self.i = i
-        self.j = j
-        self.k = k
+# class Vector:
+#     def __init__(self, i , j, k):
+#         self.i = i
+#         self.j = j
+#         self.k = k
 
-    def __str__(self):
-        return f"{self.i}i + {self.j}j + {self.k}k"
+#     def __str__(self):
+#         return f"{self.i}i + {self.j}j + {self.k}k"
 
-    def __add__(self,x):
-        return Vector(self.i + x.i,self.j + x.j,self.k + x.k)
+#     def __add__(self,x):
+#         return Vector(self.i + x.i,self.j + x.j,self.k + x.k)
 
-v = Vector(1,2,3)
-v2 = Vector(6,8,5)
-print(v)
-print(v2)
-print(v + v2)
-print(type(v + v2))
+# v = Vector(1,2,3)
+# v2 = Vector(6,8,5)
+# print(v)
+# print(v2)
+# print(v + v2)
+# print(type(v + v2))
+
+#Single inheritance
+# class Family:
+#     def __init__(self, head):
+#         self.head = head
+#         # self.members = members
+
+#     def show(self):
+#         print(f"This is a method in the parent class. Total family members are : {self.members}")
+#         # return f"The head of the family is : {self.head} and total members are : {self.members}"
+
+# class Members (Family):
+#     def __init__(self, members):
+#         self.members = members
+#     # return self.members
+
+# objmember = Members(4)
+# objmember.show()
+
+#multiple inheritance
+class Employee:
+    def __init__(self, name):
+        self.namevar = name
+    def show(self):
+        print(f"The name of the dancer is : {self.namevar}")
+
+class Dancer :
+    def __init__(self, dance):
+        self.dancevar = dance
+    def show(self):
+        print(f"The name of the Dance is : {self.dancevar}")
+
+
+class dancerEmployee ( Employee, Dancer):    #attributes/methods will be called in the order present while inheriting the classes.
+      def __init__(self, name, dance):
+        self.dancevar = dance
+        self.namevar = name
+
+o = dancerEmployee('Joseph', 'Hip-hop')
+
+print(o.namevar)
+print(o.dancevar)
+o.show()
+print(dancerEmployee.mro())
