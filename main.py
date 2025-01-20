@@ -546,27 +546,86 @@ import os
 # objmember.show()
 
 #multiple inheritance
-class Employee:
-    def __init__(self, name):
-        self.namevar = name
-    def show(self):
-        print(f"The name of the dancer is : {self.namevar}")
+# class Employee:
+#     def __init__(self, name):
+#         self.namevar = name
+#     def show(self):
+#         print(f"The name of the dancer is : {self.namevar}")
 
-class Dancer :
-    def __init__(self, dance):
-        self.dancevar = dance
-    def show(self):
-        print(f"The name of the Dance is : {self.dancevar}")
+# class Dancer :
+#     def __init__(self, dance):
+#         self.dancevar = dance
+#     def show(self):
+#         print(f"The name of the Dance is : {self.dancevar}")
 
 
-class dancerEmployee ( Employee, Dancer):    #attributes/methods will be called in the order present while inheriting the classes.
-      def __init__(self, name, dance):
-        self.dancevar = dance
-        self.namevar = name
+# class dancerEmployee ( Employee, Dancer):    #attributes/methods will be called in the order present while inheriting the classes. Here, employee objects will be called first
+#       def __init__(self, name, dance):
+#         self.dancevar = dance
+#         self.namevar = name
 
-o = dancerEmployee('Joseph', 'Hip-hop')
+# o = dancerEmployee('Joseph', 'Hip-hop')
 
-print(o.namevar)
-print(o.dancevar)
-o.show()
-print(dancerEmployee.mro())
+# print(o.namevar)
+# print(o.dancevar)
+# o.show()
+# print(dancerEmployee.mro())
+
+#time module in python
+# import time
+# def usingWhile():
+#     i = 0
+#     while i<100:
+#         i+=1
+#         print(i)
+
+# def usingFor():
+#     for i in range(100):
+#         print(i)
+
+# current_time = time.time()    #prints the current time in epoch 
+# print(current_time)
+
+# print("Start time")
+# # time.sleep(5)      #delay the time in seconds
+# print("End time")
+
+# print("Current time is:", time.ctime())
+
+# utc_time = time.gmtime()
+# print("UTC time is :", utc_time)
+# # print(dir(utc_time))
+# print(utc_time.tm_zone)
+# # usingFor()
+# # print(time.time()- init)
+
+
+#command line utility using requests module
+import argparse
+import requests
+
+def download_file(url, local_filename):
+    if local_filename is None:
+        local_filename = url.split('/')[-1]
+
+    with requests.get(url, stream=True) as r:
+        r.raise_for_status()
+        with open(local_filename, 'wb') as f:
+            for chunk in r.iter_content(chunk_size = 8192) :
+                f.write(chunk)
+    return local_filename
+parser = argparse.ArgumentParser()
+# print(dir(parser))
+parser.add_argument("url", help="URL of the file to download")
+parser.add_argument("output", help="Enter the name of the file")
+parser.add_argument("-o","--output", help="Name of the file", default=None)
+
+args = parser.parse_args()
+print(type(args))
+print(args.url)
+print(args.output)
+download_file(args.url, args.output)
+
+
+
+
